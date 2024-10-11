@@ -1,0 +1,172 @@
+/* Global Variables */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #181818;
+    --background-color-alt: #303030;
+    --text-color: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: white;
+    --background-color-alt: #eaeaea;
+    --text-color: 181818;
+  }
+}
+
+
+:root {
+  --accent-text-color: mediumseagreen;
+
+  --system-fonts: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* CSS Reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* General Layout */
+
+body,
+html {
+  height: 100%;
+}
+
+html {
+  padding: 2rem 1rem 0.5rem 1rem;
+}
+
+body {
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin: .5rem 0;
+}
+
+main,
+footer {
+  max-width: 65ch;
+  margin: 0 auto;
+  width: 100%;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+ul.date-info {
+  list-style-type: none;
+  display: flex;
+  column-gap: 1rem;
+}
+
+ul.footer-info {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Colors */
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--system-fonts);
+}
+
+a,
+ul.date-info {
+  color: var(--accent-text-color);
+}
+
+.content {
+  margin: 1rem 0;
+}
+
+h2 {
+  margin: 1rem 0;
+}
+
+/* Special image classes */
+
+.inline-left {
+  float: left;
+  margin-right: 1rem;
+}
+
+.inline-right {
+  float: right;
+  margin-left: 1rem;
+}
+
+img.w-25 {
+  width: 25%;
+}
+
+img.w-20 {
+  width: 20%;
+}
+
+img.w-50 {
+  width: 50%;
+}
+
+ol > li {
+  list-style-position: inside;
+}
+
+blockquote {
+  padding: .5rem 2rem;
+  margin: 1rem 0;
+  border-left: 3px solid var(--accent-text-color);
+  background-color: var(--background-color-alt);
+}
+
+blockquote > .author {
+  display: block;
+  margin-top: .5rem;
+}
+
+.lyric {
+  font-style: italic;
+}
+
+audio {
+  display: block;
+  width: 100%;
+  margin: .5rem 0;
+}
+
+.cover-art {
+  margin: 1rem 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex > img {
+  flex-shrink: 0;
+}
